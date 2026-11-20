@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=LED Studio
+Comment=Draw, animate and test scenes for LED matrices
+Exec=singularity-ledstudio %f
+Icon=dev.sinty.ledstudio
+Terminal=false
+Type=Application
+Categories=Graphics;Development;
+MimeType=application/json;
+X-Sinty-FormFactors=desktop;tablet
+Keywords=led;matrix;pixel;animation;arduino;
+StartupWMClass=dev.sinty.ledstudio

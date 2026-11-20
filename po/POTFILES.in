@@ -1,0 +1,4 @@
+src/app.vala
+src/ribbon.vala
+src/window.vala
+data/dev.sinty.ledstudio.desktop

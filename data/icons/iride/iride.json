@@ -1,0 +1,836 @@
+{
+ "format": 1,
+ "canvas": [
+  236,
+  236
+ ],
+ "box": [
+  18,
+  38,
+  218,
+  204
+ ],
+ "stack": [
+  {
+   "shadow": {
+    "dx": 0,
+    "dy": 5,
+    "blur": 6,
+    "color": "#0d0f1a",
+    "opacity": 0.45,
+    "region": [
+     -20,
+     -20,
+     276,
+     276
+    ]
+   },
+   "stack": [
+    {
+     "layer": "layers/000.svg",
+     "piece": "case"
+    },
+    {
+     "layer": "layers/001.svg",
+     "piece": "case"
+    }
+   ]
+  },
+  {
+   "rim": "M44 38H192A26 26 0 0 1 218 64V168A26 26 0 0 1 192 194H44A26 26 0 0 1 18 168V64A26 26 0 0 1 44 38Z",
+   "light": [
+    18,
+    38,
+    218,
+    194
+   ],
+   "piece": "case"
+  },
+  {
+   "layer": "layers/003.svg",
+   "piece": "case"
+  },
+  {
+   "layer": "layers/004.svg",
+   "piece": "case"
+  },
+  {
+   "layer": "layers/005.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/006.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/007.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/008.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/009.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/010.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/011.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/012.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/013.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/014.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/015.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/016.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/017.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/018.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/019.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/020.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/021.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/022.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/023.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/024.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/025.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/026.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/027.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/028.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/029.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/030.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/031.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/032.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/033.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/034.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/035.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/036.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/037.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/038.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/039.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/040.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/041.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/042.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/043.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/044.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/045.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/046.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/047.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/048.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/049.svg",
+   "piece": "glow"
+  },
+  {
+   "layer": "layers/050.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/051.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/052.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/053.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/054.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/055.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/056.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/057.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/058.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/059.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/060.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/061.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/062.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/063.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/064.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/065.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/066.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/067.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/068.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/069.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/070.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/071.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/072.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/073.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/074.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/075.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/076.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/077.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/078.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/079.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/080.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/081.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/082.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/083.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/084.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/085.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/086.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/087.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/088.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/089.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/090.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/091.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/092.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/093.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/094.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/095.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/096.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/097.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/098.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/099.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/100.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/101.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/102.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/103.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/104.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/105.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/106.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/107.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/108.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/109.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/110.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/111.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/112.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/113.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/114.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/115.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/116.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/117.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/118.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/119.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/120.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/121.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/122.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/123.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/124.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/125.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/126.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/127.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/128.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/129.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/130.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/131.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/132.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/133.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/134.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/135.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/136.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/137.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/138.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/139.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/140.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/141.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/142.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/143.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/144.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/145.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/146.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/147.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/148.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/149.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/150.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/151.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/152.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/153.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/154.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/155.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/156.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/157.svg",
+   "piece": "led"
+  },
+  {
+   "layer": "layers/158.svg",
+   "piece": "glass"
+  },
+  {
+   "layer": "layers/159.svg",
+   "piece": "glass"
+  }
+ ],
+ "motion": [
+  {
+   "piece": "case",
+   "origin": [
+    118.0,
+    118.0
+   ],
+   "tracks": [
+    {
+     "kind": "opacity",
+     "from": [
+      1
+     ],
+     "at": 700,
+     "duration": 75,
+     "ease": "linear"
+    }
+   ]
+  },
+  {
+   "piece": "glow",
+   "origin": [
+    118.0,
+    118.0
+   ],
+   "tracks": [
+    {
+     "kind": "translate",
+     "from": [
+      188.8,
+      0
+     ],
+     "at": 0,
+     "duration": 330,
+     "ease": "steps"
+    },
+    {
+     "kind": "scale",
+     "from": [
+      0.87,
+      0.87
+     ],
+     "at": 380,
+     "duration": 60,
+     "ease": "linear"
+    },
+    {
+     "kind": "scale",
+     "from": [
+      1.13,
+      1.13
+     ],
+     "at": 440,
+     "duration": 70,
+     "ease": "linear"
+    },
+    {
+     "kind": "scale",
+     "from": [
+      0.87,
+      0.87
+     ],
+     "at": 510,
+     "duration": 70,
+     "ease": "linear"
+    },
+    {
+     "kind": "scale",
+     "from": [
+      1.13,
+      1.13
+     ],
+     "at": 580,
+     "duration": 120,
+     "ease": "linear"
+    }
+   ],
+   "clip": [
+    32.0,
+    52.0,
+    204.0,
+    180.0
+   ]
+  },
+  {
+   "piece": "led",
+   "origin": [
+    118.0,
+    118.0
+   ],
+   "tracks": [
+    {
+     "kind": "translate",
+     "from": [
+      188.8,
+      0
+     ],
+     "at": 0,
+     "duration": 330,
+     "ease": "steps"
+    },
+    {
+     "kind": "scale",
+     "from": [
+      0.87,
+      0.87
+     ],
+     "at": 380,
+     "duration": 60,
+     "ease": "linear"
+    },
+    {
+     "kind": "scale",
+     "from": [
+      1.13,
+      1.13
+     ],
+     "at": 440,
+     "duration": 70,
+     "ease": "linear"
+    },
+    {
+     "kind": "scale",
+     "from": [
+      0.87,
+      0.87
+     ],
+     "at": 510,
+     "duration": 70,
+     "ease": "linear"
+    },
+    {
+     "kind": "scale",
+     "from": [
+      1.13,
+      1.13
+     ],
+     "at": 580,
+     "duration": 120,
+     "ease": "linear"
+    }
+   ],
+   "clip": [
+    32.0,
+    52.0,
+    204.0,
+    180.0
+   ]
+  },
+  {
+   "piece": "glass",
+   "origin": [
+    118.0,
+    118.0
+   ],
+   "tracks": []
+  }
+ ]
+}

@@ -2,7 +2,7 @@ using Gtk;
 
 namespace Singularity.Apps.LedStudio {
 
-    public class LedStudioApp : Singularity.Application {
+    public class LedStudioApp : Singularity.Application, Singularity.Migration.Migratable {
 
         public LedStudioApp() {
             Object(application_id: "dev.sinty.ledstudio", flags: ApplicationFlags.HANDLES_OPEN);
@@ -64,6 +64,49 @@ namespace Singularity.Apps.LedStudio {
         public override void open(File[] files, string hint) {
             var window = ensure_window();
             foreach (var f in files) window.import_file(f);
+        }
+
+        public Variant save_model() {
+            return new VariantDict().end();
+        }
+
+        public async void restore_model(Variant model) throws Error {
+        }
+
+        public string window_kind(Gtk.Window w) {
+            return (w is LedStudioWindow) ? "studio" : "";
+        }
+
+        public Variant save_window(Gtk.Window w) {
+            return ((LedStudioWindow) w).save_migration();
+        }
+
+        public string[] files() {
+            string[] found = {};
+            foreach (var w in get_windows()) {
+                var studio = w as LedStudioWindow;
+                if (studio == null) continue;
+                foreach (var f in studio.migration_files()) {
+                    if (!(f in found)) found += f;
+                }
+            }
+            return found;
+        }
+
+        public void prepare_move() throws Singularity.Migration.MigrationError {
+            foreach (var w in get_windows()) {
+                var studio = w as LedStudioWindow;
+                if (studio != null) studio.prepare_move();
+            }
+        }
+
+        public async Gtk.Window? rebuild_window(string kind, Variant data) throws Error {
+            if (kind != "studio") return null;
+            var old = get_active_window() as LedStudioWindow;
+            if (old != null) old.destroy();
+            var w = new LedStudioWindow(this);
+            w.restore_migration(data);
+            return w;
         }
 
         private const string CSS = """

@@ -105,6 +105,91 @@ namespace Singularity.Apps.LedStudio {
             });
         }
 
+        public void prepare_move() throws Singularity.Migration.MigrationError {
+            if (previewing) throw new Singularity.Migration.MigrationError.UNSUPPORTED(_("Stop the preview on the matrix before moving LED Studio"));
+        }
+
+        public string[] migration_files() {
+            if (save_path == null) return {};
+            return { Singularity.Migration.portable_path(File.new_for_path(save_path)) };
+        }
+
+        public Variant save_migration() {
+            var d = new VariantDict();
+            d.insert_value("scene", new Variant.string(scene.to_json()));
+            d.insert_value("id", new Variant.string(current_id.has_prefix("file:") ? "" : current_id));
+            d.insert_value("path", new Variant.string(save_path != null ? Singularity.Migration.portable_path(File.new_for_path(save_path)) : ""));
+            d.insert_value("dirty", new Variant.boolean(dirty));
+            d.insert_value("layer", new Variant.int32(selected_layer));
+            d.insert_value("frame", new Variant.int32(current_frame));
+            d.insert_value("playing", new Variant.boolean(playing));
+            if (playing) d.insert_value("elapsed", new Variant.int64((get_monotonic_time() - started) / 1000));
+            d.insert_value("zoom", new Variant.int32(zoom_index));
+            d.insert_value("level", new Variant.string(ribbon.level_selector.selected ?? paint_level.to_string()));
+            d.insert_value("color", new Variant.string(ribbon.color_selector.selected ?? ""));
+            d.insert_value("grid", new Variant.boolean(state_of("grid")));
+            d.insert_value("eraser", new Variant.boolean(state_of("eraser")));
+            var values = new VariantBuilder(new VariantType("a{ss}"));
+            string[] keys = ctx.keys();
+            qsort_with_data<string>(keys, sizeof(string), (a, b) => strcmp(a, b));
+            foreach (var key in keys) {
+                if (live_clock.active && (key == "time" || key == "date" || key == "weekday")) continue;
+                values.add("{ss}", key, ctx.get_value(key));
+            }
+            d.insert_value("values", values.end());
+            return d.end();
+        }
+
+        public void restore_migration(Variant data) {
+            var d = new VariantDict(data);
+            var values = d.lookup_value("values", new VariantType("a{ss}"));
+            if (values != null) {
+                var it = values.iterator();
+                string key, value;
+                while (it.next("{ss}", out key, out value)) ctx.set_value(key, value);
+            }
+            string json = (d.lookup_value("scene", VariantType.STRING) ?? new Variant.string("")).get_string();
+            LedScene restored;
+            try {
+                restored = LedScene.from_json(json);
+            } catch (Error e) {
+                return;
+            }
+            string id = (d.lookup_value("id", VariantType.STRING) ?? new Variant.string("")).get_string();
+            string portable = (d.lookup_value("path", VariantType.STRING) ?? new Variant.string("")).get_string();
+            string? path = portable != "" ? Singularity.Migration.local_file(portable).get_path() : null;
+            if (path != null) id = "file:" + path;
+            show_scene(restored, id, path);
+            dirty = (d.lookup_value("dirty", VariantType.BOOLEAN) ?? new Variant.boolean(false)).get_boolean();
+            int layer = (d.lookup_value("layer", VariantType.INT32) ?? new Variant.int32(selected_layer)).get_int32();
+            selected_layer = layer.clamp(-1, scene.layers.length - 1);
+            var l = current_bitmap();
+            int frame = (d.lookup_value("frame", VariantType.INT32) ?? new Variant.int32(0)).get_int32();
+            current_frame = l != null ? frame.clamp(0, (int) l.frames.length - 1) : 0;
+            var color = d.lookup_value("color", VariantType.STRING);
+            if (color != null && color.get_string() != "") {
+                ribbon.color_selector.selected = color.get_string();
+                var c = Gdk.RGBA();
+                c.parse(color.get_string());
+                view.color = c;
+            }
+            var level = d.lookup_value("level", VariantType.STRING);
+            if (level != null) {
+                ribbon.level_selector.selected = level.get_string();
+                paint_level = int.parse(level.get_string()).clamp(1, 7);
+            }
+            bool grid = (d.lookup_value("grid", VariantType.BOOLEAN) ?? new Variant.boolean(true)).get_boolean();
+            set_state_of("grid", grid);
+            view.show_grid = grid;
+            set_state_of("eraser", (d.lookup_value("eraser", VariantType.BOOLEAN) ?? new Variant.boolean(false)).get_boolean());
+            set_zoom((d.lookup_value("zoom", VariantType.INT32) ?? new Variant.int32(0)).get_int32());
+            playing = (d.lookup_value("playing", VariantType.BOOLEAN) ?? new Variant.boolean(true)).get_boolean();
+            refresh_all();
+            int64 elapsed = (d.lookup_value("elapsed", VariantType.INT64) ?? new Variant.int64(0)).get_int64();
+            started = get_monotonic_time() - elapsed * 1000;
+            render();
+        }
+
         private void toast(string message) {
             add_toast(new Toast(message));
         }

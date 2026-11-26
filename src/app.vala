@@ -48,6 +48,7 @@ namespace Singularity.Apps.LedStudio {
             add_action(quit_action);
             set_accels_for_action("app.quit", { "<Control>q" });
             set_accels_for_action("win.close", { "<Control>w" });
+            LedIntents.install(this);
         }
 
         private LedStudioWindow ensure_window() {

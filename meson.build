@@ -21,7 +21,7 @@ if not meson.is_subproject() and libsingularity_dep.type_name() == 'internal'
 endif
 
 executable('singularity-ledstudio',
-  files('src/app.vala', 'src/ribbon.vala', 'src/window.vala'),
+  files('src/app.vala', 'src/ribbon.vala', 'src/window.vala', 'src/agent_intents.vala'),
   dependencies: [gtk_dep, gee_dep, json_dep, libsingularity_dep],
   install: true
 )
